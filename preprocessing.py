@@ -9,6 +9,8 @@ from nltk.stem import PorterStemmer
 nltk.download('punkt')
 nltk.download('stopwords')
 
-dados_train = pd.read_csv('data/train.csv')
-dados_test = pd.read_csv('data/test.csv') 
+dados_train = pd.read_csv('classifier-data/train.csv')
+dados_test = pd.read_csv('classifier-data/test.csv') 
 # dados dos arquivos csv, treino e teste
+
+print(dados_train.head())
