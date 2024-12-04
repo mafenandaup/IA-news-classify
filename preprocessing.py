@@ -24,7 +24,8 @@ stemmer = PorterStemmer()
 # o stemmer reduz uma palavra ao seu radical. EX: programming vira program.
 
 def preprocess_text(text):
-    tokens = word_tokenize(text.lower())
+    tokens = word_tokenize(text.lower()) 
+    # os tokens ficam em letra minúscula
     filtered_tokens = [stemmer.stem(w) for w in tokens if w.isalpha() and w not in stop_words]
     return " ".join(filtered_tokens)
 
