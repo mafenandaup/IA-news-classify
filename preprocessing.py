@@ -20,6 +20,7 @@ stop_words = set(stopwords.words('english'))
 # essas palavras são irrelevantes pra indexação e classificação do conteúdo nesse contexto.
 
 stemmer = PorterStemmer()
+# o stemmer reduz uma palavra ao seu radical. EX: programming vira program.
 
 def preprocess_text(text):
     tokens = word_tokenize(text.lower())
