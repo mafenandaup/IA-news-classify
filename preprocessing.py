@@ -8,3 +8,6 @@ from nltk.tokenize import word_tokenize
 from nltk.stem import PorterStemmer
 nltk.download('punkt')
 nltk.download('stopwords')
+
+data = pd.read_csv('data/ag_news.csv')  # Atualize o caminho conforme necessário
+print(data.head())
