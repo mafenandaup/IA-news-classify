@@ -14,6 +14,7 @@ dados_test = pd.read_csv('classifier-data/test.csv')
 # dados dos arquivos csv, treino e teste
 
 print(dados_train.head())
+print(dados_train.columns)
 
 stop_words = set(stopwords.words('english'))
 # como as notícias estão em inglês, a variável é configurada para identificar stopwords nesse idioma.
@@ -27,4 +28,5 @@ def preprocess_text(text):
     filtered_tokens = [stemmer.stem(w) for w in tokens if w.isalpha() and w not in stop_words]
     return " ".join(filtered_tokens)
 
-dados_train['processed_text'] =dados_train['text_column'].apply(preprocess_text)  # Substitua 'text_column' pela coluna correta
+dados_train['processed_text'] = dados_train['description'].apply(preprocess_text)
+ # pré-processa o corpo da notícia antes de treinar o modelo.
