@@ -26,4 +26,4 @@ def preprocess_text(text):
     filtered_tokens = [stemmer.stem(w) for w in tokens if w.isalpha() and w not in stop_words]
     return " ".join(filtered_tokens)
 
-data['processed_text'] = data['text_column'].apply(preprocess_text)  # Substitua 'text_column' pela coluna correta
+dados_train['processed_text'] =dados_train['text_column'].apply(preprocess_text)  # Substitua 'text_column' pela coluna correta
