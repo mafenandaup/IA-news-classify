@@ -28,5 +28,5 @@ def preprocess_text(text):
     filtered_tokens = [stemmer.stem(w) for w in tokens if w.isalpha() and w not in stop_words]
     return " ".join(filtered_tokens)
 
-dados_train['processed_text'] = dados_train['description'].apply(preprocess_text)
+dados_train['processed_text'] = dados_train['Description'].apply(preprocess_text)
  # pré-processa o corpo da notícia antes de treinar o modelo.
