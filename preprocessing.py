@@ -1,0 +1,1 @@
+# aqui será feito o pré-processamento das palavras para a filtração apropriada.
