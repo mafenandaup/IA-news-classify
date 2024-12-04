@@ -26,6 +26,8 @@ stemmer = PorterStemmer()
 def preprocess_text(text):
     tokens = word_tokenize(text.lower()) # os tokens ficam em letra minúscula
     filtered_tokens = [stemmer.stem(w) for w in tokens if w.isalpha() and w not in stop_words]
+    # stemmer.stem(w) aplica a redução ao radical.
+    # if w.isalpha() exclui tokens q não são palavras
     return " ".join(filtered_tokens) #junta tokens em um texto único
 
 dados_train['processed_text'] = dados_train['Description'].apply(preprocess_text)
