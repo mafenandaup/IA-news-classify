@@ -31,4 +31,4 @@ def preprocess_text(text):
     return " ".join(filtered_tokens) #junta tokens em um texto único
 
 dados_train['processed_text'] = dados_train['Description'].apply(preprocess_text)
- # pré-processa o corpo da notícia antes de treinar o modelo.
+ # pré-processa o corpo da notícia antes de treinar o modelo..
